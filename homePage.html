@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرئيسية - متجر الأجهزة الإلكترونية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-mobile-alt"></i>
+                TechStore
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">الرئيسية</a></li>
+                <li><a href="products.html">المنتجات</a></li>
+                <li><a href="#">العروض</a></li>
+                <li><a href="#">من نحن</a></li>
+                <li><a href="#">اتصل بنا</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="ابحث عن منتج...">
+                </div>
+                <div class="cart-icon" onclick="window.location.href='cart.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+             
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1><i class="fas fa-laptop"></i> أحدث الأجهزة الإلكترونية</h1>
+        <p>اكتشف أفضل العروض على الموبايلات، اللابتوبات، التابلت والإكسسوارات</p>
+        <div class="hero-buttons">
+            <a href="products.html" class="btn-primary">تسوق الآن</a>
+            <a href="#" class="btn-secondary">العروض الحصرية</a>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2 class="section-title">تسوق حسب الفئة</h2>
+        <div class="category-grid">
+            <div class="category-card" onclick="window.location.href='products.html'">
+                <div class="category-icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>موبايلات</h3>
+                <p>أحدث الهواتف الذكية</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html'">
+                <div class="category-icon"><i class="fas fa-laptop"></i></div>
+                <h3>لابتوبات</h3>
+                <p>للعمل والألعاب</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html'">
+                <div class="category-icon"><i class="fas fa-clock"></i></div>
+                <h3>ساعات ذكية</h3>
+                <p>تتبع لياقتك البدنية</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html'">
+                <div class="category-icon"><i class="fas fa-headphones"></i></div>
+                <h3>سماعات</h3>
+                <p>صوت نقي وواضح</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html'">
+                <div class="category-icon"><i class="fas fa-camera"></i></div>
+                <h3>كاميرات</h3>
+                <p>احترافية ومتطورة</p>
+            </div>
+            <div class="category-card" onclick="window.location.href='products.html'">
+                <div class="category-icon"><i class="fas fa-gamepad"></i></div>
+                <h3>ألعاب</h3>
+                <p>كونسولات وإكسسوارات</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2 class="section-title">لماذا تختارنا؟</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                <h3>شحن مجاني</h3>
+                <p>توصيل مجاني لجميع المحافظات</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                <h3>ضمان الجودة</h3>
+                <p>منتجات أصلية 100% مع ضمان</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-credit-card"></i></div>
+                <h3>دفع آمن</h3>
+                <p>طرق دفع متعددة وآمنة</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                <h3>استرجاع سهل</h3>
+                <p>إرجاع المنتج خلال 14 يوم</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <h2 class="section-title">أرقامنا تتحدث</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h2>10K+</h2>
+                <p>عميل سعيد</p>
+            </div>
+            <div class="stat-card">
+                <h2>500+</h2>
+                <p>منتج متاح</p>
+            </div>
+            <div class="stat-card">
+                <h2>50+</h2>
+                <p>علامة تجارية</p>
+            </div>
+            <div class="stat-card">
+                <h2>24/7</h2>
+                <p>دعم فني</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="brands">
+        <h2 class="section-title">العلامات التجارية المميزة</h2>
+        <div class="brands-grid">
+            <div class="brand-card">Apple</div>
+            <div class="brand-card">Samsung</div>
+            <div class="brand-card">Huawei</div>
+            <div class="brand-card">Xiaomi</div>
+            <div class="brand-card">Dell</div>
+            <div class="brand-card">HP</div>
+            <div class="brand-card">Lenovo</div>
+            <div class="brand-card">Sony</div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>جاهز للتسوق؟</h2>
+        <p>ابدأ الآن واحصل على أفضل العروض والخصومات الحصرية</p>
+        <a href="products.html" class="btn-primary">تصفح المنتجات</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3><i class="fas fa-store"></i> TechStore</h3>
+                <p>متجرك الأول للأجهزة الإلكترونية الحديثة بأفضل الأسعار وأعلى جودة</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="products.html">المنتجات</a></li>
+                    <li><a href="#">العروض الخاصة</a></li>
+                    <li><a href="#">المدونة</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>خدمة العملاء</h3>
+                <ul>
+                    <li><a href="#">اتصل بنا</a></li>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                    <li><a href="#">سياسة الشحن</a></li>
+                    <li><a href="#">سياسة الإرجاع</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p><i class="fas fa-envelope"></i> info@techstore.com</p>
+                <p><i class="fas fa-phone"></i> 01234567890</p>
+                <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 TechStore. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+</body>
+</html>
