@@ -1,13 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>المنتجات - TechStore</title>
     <link rel="stylesheet" href="./css/products.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <style>
+
+    </style>
 </head>
+
 <body>
-    
+
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="homePage.html" class="logo">
+                <i class="fas fa-mobile-alt"></i> TechStore
+            </a>
+            <ul class="nav-links">
+                <li><a href="./homePage.html">الرئيسية</a></li>
+                <li><a href="./webfonts/
+                " class="active">المنتجات</a></li>
+                <li><a href="./products.html">العروض</a></li>
+                <li><a href="./aboutUs.html">من نحن</a></li>
+                <li><a href="./contactUs.html">اتصل بنا</a></li>
+            </ul>
+            <div class="nav-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="ابحث عن منتج..." id="searchInput" oninput="filterProducts()">
+                </div>
+                <div class="cart-icon" onclick="window.location.href='cart.html'">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <div class="page-hero">
+        <h1><i class="fas fa-store"></i> جميع المنتجات</h1>
+        <p>اختر من أكثر من 500 منتج إلكتروني بأفضل الأسعار</p>
+    </div>
+
+    <!-- Main Layout -->
+    <div class="products-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="filter-box">
+                <h3><i class="fas fa-filter"></i> الفئات</h3>
+                <div class="filter-option"><input type="checkbox" id="cat1" onchange="filterProducts()"><label
+                        for="cat1">موبايلات</label></div>
+                <div class="filter-option"><input type="checkbox" id="cat2" onchange="filterProducts()"><label
+                        for="cat2">لابتوبات</label></div>
+                <div class="filter-option"><input type="checkbox" id="cat3" onchange="filterProducts()"><label
+                        for="cat3">ساعات ذكية</label></div>
+                <div class="filter-option"><input type="checkbox" id="cat4" onchange="filterProducts()"><label
+                        for="cat4">سماعات</label></div>
+                <div class="filter-option"><input type="checkbox" id="cat5" onchange="filterProducts()"><label
+                        for="cat5">كاميرات</label></div>
+                <div class="filter-option"><input type="checkbox" id="cat6" onchange="filterProducts()"><label
+                        for="cat6">ألعاب</label></div>
+            </div>
+
+            <div class="filter-box">
+                <h3><i class="fas fa-tags"></i> نطاق السعر</h3>
+                <div class="price-range">
+                    <div class="price-inputs">
+                        <input type="number" id="minPrice" placeholder="من" min="0" value="0"
+                            oninput="filterProducts()">
+                        <input type="number" id="maxPrice" placeholder="إلى" min="0" value="50000"
+                            oninput="filterProducts()">
+                    </div>
+                    <input type="range" id="priceRange" min="0" max="50000" value="50000"
+                        oninput="document.getElementById('maxPrice').value=this.value; filterProducts()">
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <h3><i class="fas fa-star"></i> التقييم</h3>
+                <div class="filter-option"><input type="checkbox" id="r5" onchange="filterProducts()"><label
+                        for="r5">⭐⭐⭐⭐⭐ فقط</label></div>
+                <div class="filter-option"><input type="checkbox" id="r4" onchange="filterProducts()"><label
+                        for="r4">⭐⭐⭐⭐ فأكثر</label></div>
+                <div class="filter-option"><input type="checkbox" id="r3" onchange="filterProducts()"><label
+                        for="r3">⭐⭐⭐ فأكثر</label></div>
+            </div>
+
+            <div class="filter-box">
+                <h3><i class="fas fa-trademark"></i> العلامات التجارية</h3>
+                <div class="filter-option"><input type="checkbox" id="bApple" onchange="filterProducts()"><label
+                        for="bApple">Apple</label></div>
+                <div class="filter-option"><input type="checkbox" id="bSamsung" onchange="filterProducts()"><label
+                        for="bSamsung">Samsung</label></div>
+                <div class="filter-option"><input type="checkbox" id="bXiaomi" onchange="filterProducts()"><label
+                        for="bXiaomi">Xiaomi</label></div>
+                <div class="filter-option"><input type="checkbox" id="bSony" onchange="filterProducts()"><label
+                        for="bSony">Sony</label></div>
+                <div class="filter-option"><input type="checkbox" id="bDell" onchange="filterProducts()"><label
+                        for="bDell">Dell</label></div>
+                <div class="filter-option"><input type="checkbox" id="bHP" onchange="filterProducts()"><label
+                        for="bHP">HP</label></div>
+            </div>
+
+            <button class="apply-filter" onclick="resetFilters()">
+                <i class="fas fa-redo"></i> إعادة تعيين الفلاتر
+            </button>
+        </aside>
+
+        <!-- Products Area -->
+        <main class="products-area">
+            <div class="products-toolbar">
+                <p class="results-count">عرض <span id="productCount">18</span> منتج</p>
+                <div style="display:flex;gap:15px;align-items:center;flex-wrap:wrap;">
+                    <div class="view-toggle">
+                        <button class="view-btn active" onclick="setView('grid',this)" title="شبكة"><i
+                                class="fas fa-th"></i></button>
+                        <button class="view-btn" onclick="setView('list',this)" title="قائمة"><i
+                                class="fas fa-list"></i></button>
+                    </div>
+                    <select class="sort-select" id="sortSelect" onchange="filterProducts()">
+                        <option value="default">ترتيب افتراضي</option>
+                        <option value="price-asc">السعر: من الأقل</option>
+                        <option value="price-desc">السعر: من الأعلى</option>
+                        <option value="rating">الأعلى تقييماً</option>
+                        <option value="newest">الأحدث</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="category-tabs" id="categoryTabs">
+                <button class="tab-btn active" onclick="setCategory('all',this)">الكل</button>
+                <button class="tab-btn" onclick="setCategory('موبايلات',this)"><i class="fas fa-mobile-alt"></i> موبايلات</button>
+                <button class="tab-btn" onclick="setCategory('لابتوبات',this)"><i class="fas fa-laptop"></i> لابتوبات</button>
+                <button class="tab-btn" onclick="setCategory('ساعات ذكية',this)"><i class="fas fa-clock"></i> ساعات</button>
+                <button class="tab-btn" onclick="setCategory('سماعات',this)"><i class="fas fa-headphones"></i> سماعات</button>
+                <button class="tab-btn" onclick="setCategory('كاميرات',this)"><i class="fas fa-camera"></i> كاميرات</button>
+                <button class="tab-btn" onclick="setCategory('ألعاب',this)"><i class="fas fa-gamepad"></i> ألعاب</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid"></div>
+
+            <div class="pagination" id="pagination">
+                <button class="page-btn" onclick="changePage(-1)"><i class="fas fa-chevron-right"></i></button>
+                <button class="page-btn active" id="page1">1</button>
+                <button class="page-btn" id="page2">2</button>
+                <button class="page-btn" id="page3">3</button>
+                <button class="page-btn" onclick="changePage(1)"><i class="fas fa-chevron-left"></i></button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3><i class="fas fa-store"></i> TechStore</h3>
+                <p>متجرك الأول للأجهزة الإلكترونية الحديثة بأفضل الأسعار وأعلى جودة</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="products.html">المنتجات</a></li>
+                    <li><a href="#">العروض الخاصة</a></li>
+                    <li><a href="#">المدونة</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>خدمة العملاء</h3>
+                <ul>
+                    <li><a href="#">اتصل بنا</a></li>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                    <li><a href="#">سياسة الشحن</a></li>
+                    <li><a href="#">سياسة الإرجاع</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>تواصل معنا</h3>
+                <p><i class="fas fa-envelope"></i> info@techstore.com</p>
+                <p><i class="fas fa-phone"></i> 01234567890</p>
+                <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 TechStore. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="./js/products.js">
+
+    </script>
 </body>
+
 </html>

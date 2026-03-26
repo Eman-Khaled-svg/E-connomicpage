@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج - TechStore</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/productDetails.css">
+</head>
+<body>
+ 
+<!-- Header -->
+<header class="header">
+    <div class="nav-container">
+        <a href="homePage.html" class="logo"><i class="fas fa-mobile-alt"></i> TechStore</a>
+        <ul class="nav-links">
+            <li><a href="homePage.html">الرئيسية</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="#">العروض</a></li>
+            <li><a href="#">من نحن</a></li>
+            <li><a href="#">اتصل بنا</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="window.location.href='cart.html'">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </div>
+</header>
+ 
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+    <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
+    <i class="fas fa-chevron-left" style="font-size:0.7rem"></i>
+    <a href="products.html">المنتجات</a>
+    <i class="fas fa-chevron-left" style="font-size:0.7rem"></i>
+    <span id="breadcrumbName">تفاصيل المنتج</span>
+</div>
+ 
+<!-- Product Layout -->
+<div class="product-layout">
+ 
+    <!-- Gallery -->
+    <div class="product-gallery">
+        <div class="main-image" id="mainImage">
+            <span class="badge-main" id="badgeMain">خصم 10%</span>
+            <img id="mainImg" src="" alt="" onerror="this.style.opacity='0.3'">
+        </div>
+        <div class="thumbnails" id="thumbs">
+            <div class="thumb active" onclick="selectThumb(this, 0)"><img id="thumb0" src="" alt=""></div>
+            <div class="thumb" onclick="selectThumb(this, 1)"><img id="thumb1" src="" alt=""></div>
+            <div class="thumb" onclick="selectThumb(this, 2)"><img id="thumb2" src="" alt=""></div>
+            <div class="thumb" onclick="selectThumb(this, 3)"><img id="thumb3" src="" alt=""></div>
+        </div>
+    </div>
+ 
+    <!-- Info -->
+    <div class="product-info" id="productInfo">
+        <div class="info-badge"><i class="fas fa-check-circle"></i> متوفر في المخزون</div>
+        <h1 class="product-title" id="productTitle">iPhone 15 Pro Max</h1>
+        <p class="product-brand">العلامة التجارية: <span>Apple</span></p>
+ 
+        <div class="rating-section">
+            <span class="stars-big">★★★★★</span>
+            <span class="rating-num">4.9</span>
+            <span class="reviews-link" onclick="switchTab('reviews')">(412 تقييم)</span>
+        </div>
+ 
+        <div class="price-section">
+            <div class="price-main" id="currentPrice">35,999 ج.م</div>
+            <div class="price-details">
+                <span class="price-old">39,999 ج.م</span>
+                <span class="price-save">وفر 10% 🎉</span>
+            </div>
+        </div>
+ 
+        <!-- Color -->
+        <div class="option-section">
+            <p class="option-label">اللون: <span id="selectedColor">تيتانيوم أسود</span></p>
+            <div class="color-options">
+                <div class="color-btn active" style="background:#1a1a1a" onclick="selectColor(this,'تيتانيوم أسود')" title="تيتانيوم أسود"></div>
+                <div class="color-btn" style="background:#e8d5c0" onclick="selectColor(this,'تيتانيوم أبيض')" title="تيتانيوم أبيض"></div>
+                <div class="color-btn" style="background:#4a6fa5" onclick="selectColor(this,'تيتانيوم أزرق')" title="تيتانيوم أزرق"></div>
+                <div class="color-btn" style="background:#8b7355" onclick="selectColor(this,'تيتانيوم طبيعي')" title="تيتانيوم طبيعي"></div>
+            </div>
+        </div>
+ 
+        <!-- Storage -->
+        <div class="option-section">
+            <p class="option-label">سعة التخزين: <span id="selectedStorage">256GB</span></p>
+            <div class="storage-options">
+                <button class="storage-btn active" onclick="selectStorage(this,'256GB')">256GB</button>
+                <button class="storage-btn" onclick="selectStorage(this,'512GB')">512GB</button>
+                <button class="storage-btn" onclick="selectStorage(this,'1TB')">1TB</button>
+            </div>
+        </div>
+ 
+        <!-- Quantity -->
+        <div class="qty-section">
+            <span class="qty-label">الكمية:</span>
+            <div class="qty-control">
+                <button class="qty-btn" onclick="changeQty(-1)"><i class="fas fa-minus"></i></button>
+                <span class="qty-val" id="qtyVal">1</span>
+                <button class="qty-btn" onclick="changeQty(1)"><i class="fas fa-plus"></i></button>
+            </div>
+            <span class="stock-info"><i class="fas fa-check"></i> متبقي 15 قطعة</span>
+        </div>
+ 
+        <!-- Buttons -->
+        <div class="action-buttons">
+            <button class="btn-cart-main" onclick="addToCart()"><i class="fas fa-cart-plus"></i> أضف للسلة</button>
+            <button class="btn-wishlist" id="wishlistBtn" onclick="toggleWishlist()"><i class="fas fa-heart"></i></button>
+            <button class="btn-buy-now" onclick="buyNow()"><i class="fas fa-bolt"></i> اشتري الآن</button>
+        </div>
+ 
+        <!-- Feature Tags -->
+        <div class="feature-tags">
+            <span class="feat-tag"><i class="fas fa-truck"></i> شحن مجاني</span>
+            <span class="feat-tag"><i class="fas fa-shield-alt"></i> ضمان سنة</span>
+            <span class="feat-tag"><i class="fas fa-sync-alt"></i> إرجاع 14 يوم</span>
+            <span class="feat-tag"><i class="fas fa-lock"></i> دفع آمن</span>
+        </div>
+    </div>
+</div>
+ 
+<!-- Detail Tabs -->
+<div class="detail-tabs">
+    <div class="tab-nav">
+        <button class="tab-nav-btn active" onclick="switchTab('specs')">المواصفات</button>
+        <button class="tab-nav-btn" onclick="switchTab('desc')">الوصف</button>
+        <button class="tab-nav-btn" onclick="switchTab('reviews')">التقييمات (412)</button>
+    </div>
+ 
+    <!-- Specs Tab -->
+    <div class="tab-panel active" id="tab-specs">
+        <div class="specs-table">
+            <div class="spec-row"><div class="spec-key">المعالج</div><div class="spec-val">Apple A17 Pro Bionic Chip</div></div>
+            <div class="spec-row"><div class="spec-key">الشاشة</div><div class="spec-val">6.7 بوصة OLED Super Retina XDR - 2796×1290</div></div>
+            <div class="spec-row"><div class="spec-key">الكاميرا الرئيسية</div><div class="spec-val">48 MP + 12 MP + 12 MP - تيلي 5x</div></div>
+            <div class="spec-row"><div class="spec-key">الكاميرا الأمامية</div><div class="spec-val">12 MP TrueDepth</div></div>
+            <div class="spec-row"><div class="spec-key">التخزين</div><div class="spec-val">256GB / 512GB / 1TB</div></div>
+            <div class="spec-row"><div class="spec-key">الذاكرة</div><div class="spec-val">8GB RAM</div></div>
+            <div class="spec-row"><div class="spec-key">البطارية</div><div class="spec-val">4422 mAh - شحن سريع 27W</div></div>
+            <div class="spec-row"><div class="spec-key">نظام التشغيل</div><div class="spec-val">iOS 17</div></div>
+            <div class="spec-row"><div class="spec-key">الإصدارات</div><div class="spec-val">5G / Wi-Fi 6E / Bluetooth 5.3</div></div>
+            <div class="spec-row"><div class="spec-key">الهيكل</div><div class="spec-val">تيتانيوم + زجاج Ceramic Shield</div></div>
+            <div class="spec-row"><div class="spec-key">مقاومة الماء</div><div class="spec-val">IP68 - حتى 6 أمتار لمدة 30 دقيقة</div></div>
+            <div class="spec-row"><div class="spec-key">الوزن</div><div class="spec-val">221 جرام</div></div>
+        </div>
+    </div>
+ 
+    <!-- Description Tab -->
+    <div class="tab-panel" id="tab-desc">
+        <div class="description">
+            <h3><i class="fas fa-star" style="color:#9933ff"></i> عن هذا المنتج</h3>
+            <p>آيفون 15 برو ماكس هو أقوى هاتف أطلقته آبل على الإطلاق. يأتي بتصميم مصنوع من التيتانيوم الفضائي المتين والخفيف، مما يجعله أقوى هاتف آيفون في التاريخ.</p>
+            <h3>🔥 أبرز المميزات</h3>
+            <div class="desc-feature"><i class="fas fa-microchip"></i><span>معالج A17 Pro Bionic المصنوع بتقنية 3nm - الأسرع في صناعة الهواتف الذكية لعام 2023</span></div>
+            <div class="desc-feature"><i class="fas fa-camera"></i><span>كاميرا تيلي بتقريب بصري 5x لأول مرة في تاريخ آيفون، مما يتيح لك التقاط لحظات بعيدة بوضوح مذهل</span></div>
+            <div class="desc-feature"><i class="fas fa-usb"></i><span>منفذ USB-C الجديد يدعم سرعات USB 3 مما يسمح بنقل الملفات بسرعة تصل إلى 10 Gbps</span></div>
+            <div class="desc-feature"><i class="fas fa-gamepad"></i><span>يدعم ألعاب AAA بشكل مباشر مثل Resident Evil 4 و Assassin's Creed Mirage</span></div>
+            <div class="desc-feature"><i class="fas fa-film"></i><span>تصوير فيديو بجودة Log بدرجة 10-bit للمحترفين، مع دعم Apple ProRes</span></div>
+            <div class="desc-feature"><i class="fas fa-shield-alt"></i><span>مقاومة الماء والغبار IP68 مع زجاج Ceramic Shield الأكثر متانة من أي زجاج للهاتف الذكي</span></div>
+            <h3>📦 محتويات العلبة</h3>
+            <div class="desc-feature"><i class="fas fa-check"></i><span>آيفون 15 برو ماكس</span></div>
+            <div class="desc-feature"><i class="fas fa-check"></i><span>كابل USB-C (1 متر)</span></div>
+            <div class="desc-feature"><i class="fas fa-check"></i><span>وثائق وضمان آبل</span></div>
+        </div>
+    </div>
+ 
+    <!-- Reviews Tab -->
+    <div class="tab-panel" id="tab-reviews">
+        <div class="reviews-summary">
+            <div class="rating-big">
+                <div class="num">4.9</div>
+                <div class="stars">★★★★★</div>
+                <div class="count">من 412 تقييم</div>
+            </div>
+            <div class="rating-bars">
+                <div class="bar-row"><span class="bar-label">5 ★</span><div class="bar-track"><div class="bar-fill" style="width:82%"></div></div><span class="bar-count">338</span></div>
+                <div class="bar-row"><span class="bar-label">4 ★</span><div class="bar-track"><div class="bar-fill" style="width:12%"></div></div><span class="bar-count">49</span></div>
+                <div class="bar-row"><span class="bar-label">3 ★</span><div class="bar-track"><div class="bar-fill" style="width:4%"></div></div><span class="bar-count">16</span></div>
+                <div class="bar-row"><span class="bar-label">2 ★</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span class="bar-count">4</span></div>
+                <div class="bar-row"><span class="bar-label">1 ★</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span class="bar-count">5</span></div>
+            </div>
+        </div>
+ 
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer">
+                    <div class="reviewer-avatar">أ</div>
+                    <div><div class="reviewer-name">أحمد محمد</div><div class="review-date">منذ 3 أيام</div></div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">جهاز رائع جداً! الكاميرا لا تصدق والأداء خارق. استخدمته في السفر وجودة الصور بالليل أذهلتني. يستحق كل قرش منه بالفعل.</p>
+            <div class="review-helpful">هل كان هذا مفيداً؟ <span>نعم (24)</span> · <span>لا (2)</span></div>
+        </div>
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer">
+                    <div class="reviewer-avatar" style="background:linear-gradient(135deg,#ff00ff,#9933ff)">س</div>
+                    <div><div class="reviewer-name">سارة علي</div><div class="review-date">منذ أسبوع</div></div>
+                </div>
+                <div class="review-stars">★★★★★</div>
+            </div>
+            <p class="review-text">أفضل هاتف اشتريته في حياتي. الشاشة ناصعة والألوان حيوية. البطارية بتعدي اليوم كامل حتى مع الاستخدام الثقيل. التوصيل كان سريع جداً.</p>
+            <div class="review-helpful">هل كان هذا مفيداً؟ <span>نعم (18)</span> · <span>لا (1)</span></div>
+        </div>
+        <div class="review-card">
+            <div class="review-header">
+                <div class="reviewer">
+                    <div class="reviewer-avatar" style="background:linear-gradient(135deg,#00cc88,#009966)">م</div>
+                    <div><div class="reviewer-name">محمود حسن</div><div class="review-date">منذ أسبوعين</div></div>
+                </div>
+                <div class="review-stars">★★★★☆</div>
+            </div>
+            <p class="review-text">الهاتف ممتاز ولكن السعر مرتفع شوية. أداء المعالج لا يتوقف أبداً وحتى في الألعاب الثقيلة ما في تأخير. الكاميرا أفضل من توقعاتي.</p>
+            <div class="review-helpful">هل كان هذا مفيداً؟ <span>نعم (11)</span> · <span>لا (3)</span></div>
+        </div>
+    </div>
+</div>
+ 
+<!-- Related Products -->
+<div class="related">
+    <h2><i class="fas fa-th"></i> منتجات ذات صلة</h2>
+    <div class="related-grid" id="relatedGrid"></div>
+</div>
+ 
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3><i class="fas fa-store"></i> TechStore</h3>
+            <p>متجرك الأول للأجهزة الإلكترونية الحديثة بأفضل الأسعار وأعلى جودة</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>روابط سريعة</h3>
+            <ul><li><a href="index.html">الرئيسية</a></li><li><a href="products.html">المنتجات</a></li></ul>
+        </div>
+        <div class="footer-section">
+            <h3>خدمة العملاء</h3>
+            <ul><li><a href="#">اتصل بنا</a></li><li><a href="#">الأسئلة الشائعة</a></li><li><a href="#">سياسة الإرجاع</a></li></ul>
+        </div>
+        <div class="footer-section">
+            <h3>تواصل معنا</h3>
+            <p><i class="fas fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="60090e060f201405030813140f12054e030f0d">[email&#160;protected]</a></p>
+            <p><i class="fas fa-phone"></i> 01234567890</p>
+            <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 TechStore. جميع الحقوق محفوظة.</p></div>
+</footer>
+ 
+<div class="toast" id="toast"></div>
+
+    <script src="./js/productDetails.js">
+
+    </script>
+</body>
+
+</html>

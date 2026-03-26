@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - TechStore</title>
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link rel="stylesheet" href="./css/contactUs.css">
+
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+    <div class="nav-container">
+        <a href="homePage.html" class="logo"><i class="fas fa-mobile-alt"></i> TechStore</a>
+        <ul class="nav-links">
+            <li><a href="homePage.html">الرئيسية</a></li>
+            <li><a href="products.html">المنتجات</a></li>
+            <li><a href="products.html">العروض</a></li>
+            <li><a href="aboutUs.html">من نحن</a></li>
+            <li><a href="contactUs.html" class="active">اتصل بنا</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="cart-icon" onclick="window.location.href='cart.html'">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="contact-hero">
+    <h1><i class="fas fa-headset"></i> اتصل بنا</h1>
+    <p>نحن هنا لمساعدتك! تواصل معنا بأي طريقة تناسبك وسنرد عليك في أقرب وقت.</p>
+</section>
+
+<!-- Main Layout -->
+<div class="contact-layout">
+    <!-- Info -->
+    <div class="contact-info">
+        <a href="tel:01234567890" class="info-card">
+            <div class="info-icon"  style="color:#fff;"><i class="fas fa-phone-alt"></i></div>
+            <div class="info-text">
+                <h4>اتصل بنا</h4>
+                <p>متاحون من السبت إلى الخميس</p>
+                <span>01234567890</span>
+            </div>
+        </a>
+        <a href="mailto:info@techstore.com" class="info-card">
+            <div class="info-icon" style="color:#fff;"><i class="fas fa-envelope"></i></div>
+            <div class="info-text">
+                <h4>راسلنا بالإيميل</h4>
+                <p>نرد خلال 24 ساعة</p>
+                <span>info@techstore.com</span>
+            </div>
+        </a>
+        <a href="https://wa.me/201234567890" target="_blank" class="info-card">
+            <div class="info-icon" style="background:linear-gradient(135deg,#25D366,#128C7E)"><i class="fab fa-whatsapp"></i></div>
+            <div class="info-text">
+                <h4>واتساب</h4>
+                <p>رد فوري على استفساراتك</p>
+                <span>01234567890</span>
+            </div>
+        </a>
+        <div class="info-card" style="cursor:default">
+            <div class="info-icon" ><i class="fas fa-map-marker-alt"></i></div>
+            <div class="info-text">
+                <h4>عنواننا</h4>
+                <p>مدينة نصر، القاهرة</p>
+                <span>شارع عباس العقاد، برج التكنولوجيا</span>
+            </div>
+        </div>
+
+        <!-- Social -->
+        <div class="social-box">
+            <h3><i class="fas fa-share-alt" style="color:#9933ff"></i> تابعنا على السوشيال</h3>
+            <div class="social-grid">
+                <a href="#" class="social-btn"><i class="fab fa-facebook" style="color:#1877F2"></i> فيسبوك</a>
+                <a href="#" class="social-btn"><i class="fab fa-instagram" style="color:#E4405F"></i> انستجرام</a>
+                <a href="#" class="social-btn"><i class="fab fa-twitter" style="color:#1DA1F2"></i> تويتر</a>
+                <a href="#" class="social-btn"><i class="fab fa-tiktok" style="color:#ff0050"></i> تيك توك</a>
+                <a href="#" class="social-btn"><i class="fab fa-youtube" style="color:#FF0000"></i> يوتيوب</a>
+                <a href="#" class="social-btn"><i class="fab fa-linkedin" style="color:#0A66C2"></i> لينكدإن</a>
+            </div>
+        </div>
+
+        <!-- Hours -->
+        <div class="hours-box">
+            <h3><i class="fas fa-clock" style="color:#9933ff"></i> مواعيد العمل</h3>
+            <div class="hours-row"><span>السبت – الأربعاء</span><span>9 صباحاً – 10 مساءً</span></div>
+            <div class="hours-row today"><span>الخميس <span class="badge-today">اليوم</span></span><span>9 صباحاً – 8 مساءً</span></div>
+            <div class="hours-row"><span>الجمعة</span><span>2 ظهراً – 10 مساءً</span></div>
+            <div class="hours-row"><span><i class="fas fa-headset" style="color:#00cc88"></i> الدعم الرقمي</span><span style="color:#00cc88">24/7 متاح</span></div>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="contact-form" id="formSection">
+        <h2><i class="fas fa-paper-plane" style="color:#9933ff"></i> أرسل رسالة</h2>
+        <p class="form-desc">املأ النموذج وسنتواصل معك في أسرع وقت ممكن</p>
+
+        <div class="form-row">
+            <div class="form-group" id="grp-name">
+                <label><i class="fas fa-user"></i> الاسم الكامل *</label>
+                <input type="text" id="inp-name" placeholder="مثال: أحمد محمد">
+                <p class="error-msg">الرجاء إدخال اسمك</p>
+            </div>
+            <div class="form-group" id="grp-email">
+                <label><i class="fas fa-envelope"></i> البريد الإلكتروني *</label>
+                <input type="email" id="inp-email" placeholder="example@email.com" dir="ltr">
+                <p class="error-msg">الرجاء إدخال إيميل صحيح</p>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group" id="grp-phone">
+                <label><i class="fas fa-phone"></i> رقم الهاتف</label>
+                <input type="tel" id="inp-phone" placeholder="01xxxxxxxxx" dir="ltr">
+                <p class="error-msg">رقم هاتف غير صحيح</p>
+            </div>
+            <div class="form-group">
+                <label><i class="fas fa-tag"></i> موضوع الرسالة *</label>
+                <select id="inp-subject">
+                    <option value="">اختر الموضوع...</option>
+                    <option value="support">استفسار عن منتج</option>
+                    <option value="order">متابعة طلب</option>
+                    <option value="return">استرجاع منتج</option>
+                    <option value="complaint">شكوى</option>
+                    <option value="suggestion">اقتراح</option>
+                    <option value="other">أخرى</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-group" id="grp-msg">
+            <label><i class="fas fa-comment"></i> رسالتك *</label>
+            <textarea id="inp-msg" placeholder="اكتب رسالتك هنا..." maxlength="500" oninput="updateChar()"></textarea>
+            <p class="char-count"><span id="charCount">0</span>/500</p>
+            <p class="error-msg">الرجاء كتابة رسالتك (10 أحرف على الأقل)</p>
+        </div>
+
+        <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+            <i class="fas fa-paper-plane"></i> إرسال الرسالة
+        </button>
+
+        <div class="success-msg" id="successMsg">
+            <div class="success-icon">✅</div>
+            <h3>تم إرسال رسالتك!</h3>
+            <p>شكراً لتواصلك معنا. سنرد عليك خلال 24 ساعة على الأكثر.</p>
+            <button class="back-btn" onclick="resetForm()"><i class="fas fa-redo"></i> إرسال رسالة أخرى</button>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ -->
+<section class="faq">
+    <h2><i class="fas fa-question-circle" style="color:#9933ff"></i> الأسئلة الشائعة</h2>
+
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+            كيف يمكنني تتبع طلبي؟
+            <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">بعد تأكيد طلبك، ستصلك رسالة على إيميلك برقم التتبع. يمكنك تتبع الشحنة مباشرة على موقع شركة الشحن أو التواصل معنا مباشرة.</div></div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+            ما هي سياسة الإرجاع؟
+            <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">يمكنك إرجاع أي منتج خلال 14 يوم من تاريخ الاستلام بشرط أن يكون في حالته الأصلية مع كامل مستلزماته. يتم استرداد المبلغ خلال 3-5 أيام عمل.</div></div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+            هل جميع المنتجات أصلية ومضمونة؟
+            <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">نعم، جميع منتجاتنا 100% أصلية مع ضمان المصنع الرسمي وفاتورة ضريبية. نحن وكلاء معتمدون للعلامات التجارية الكبرى في مصر.</div></div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+            ما هي طرق الدفع المتاحة؟
+            <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">نقبل الدفع بالفيزا والماستركارد وباي بال والدفع عند الاستلام (كاش أو كارت). جميع المعاملات الإلكترونية مشفرة وآمنة 100%.</div></div>
+    </div>
+    <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+            ما هو وقت التوصيل؟
+            <i class="fas fa-chevron-down faq-icon"></i>
+        </div>
+        <div class="faq-answer"><div class="faq-answer-inner">التوصيل داخل القاهرة والجيزة يتم خلال 24 ساعة، وباقي المحافظات 2-3 أيام عمل. الشحن مجاني على جميع الطلبات.</div></div>
+    </div>
+</section>
+
+<!-- Map -->
+<div class="map-section">
+    <h2><i class="fas fa-map" style="color:#9933ff"></i> موقعنا</h2>
+    <div class="map-placeholder" onclick="window.open('https://maps.google.com/?q=مدينة+نصر+القاهرة','_blank')">
+        <i class="fas fa-map-marker-alt"></i>
+        <p>شارع عباس العقاد، مدينة نصر، القاهرة</p>
+        <span>اضغط لفتح الخريطة على Google Maps</span>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3><i class="fas fa-store"></i> TechStore</h3>
+            <p>متجرك الأول للأجهزة الإلكترونية الحديثة بأفضل الأسعار وأعلى جودة</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>روابط سريعة</h3>
+            <ul><li><a href="index.html">الرئيسية</a></li><li><a href="products.html">المنتجات</a></li><li><a href="about.html">من نحن</a></li></ul>
+        </div>
+        <div class="footer-section">
+            <h3>خدمة العملاء</h3>
+            <ul><li><a href="contact.html">اتصل بنا</a></li><li><a href="#">الأسئلة الشائعة</a></li><li><a href="#">سياسة الإرجاع</a></li></ul>
+        </div>
+        <div class="footer-section">
+            <h3>تواصل معنا</h3>
+            <p><i class="fas fa-envelope"></i> info@techstore.com</p>
+            <p><i class="fas fa-phone"></i> 01234567890</p>
+            <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+        </div>
+    </div>
+    <div class="footer-bottom"><p>© 2025 TechStore. جميع الحقوق محفوظة.</p></div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script src="./js/contactUs.js">
+
+</script>
+</body>
+</html>
