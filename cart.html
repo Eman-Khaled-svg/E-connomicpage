@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>السلة - TechStore</title>
+    <title>Cart - TechStore</title>
     <link rel="stylesheet" href="./css/all.min.css">
     <link rel="stylesheet" href="./css/cart.css">
 </head>
@@ -14,11 +14,11 @@
     <div class="nav-container">
         <a href="index.html" class="logo"><i class="fas fa-mobile-alt"></i> TechStore</a>
         <ul class="nav-links">
-            <li><a href="index.html">الرئيسية</a></li>
-            <li><a href="products.html">المنتجات</a></li>
-            <li><a href="#">العروض</a></li>
-            <li><a href="#">من نحن</a></li>
-            <li><a href="#">اتصل بنا</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
         <div class="nav-actions">
             <div class="cart-icon">
@@ -31,17 +31,17 @@
 
 <!-- Page Hero -->
 <div class="page-hero">
-    <h1><i class="fas fa-shopping-cart"></i> سلة التسوق</h1>
-    <p id="cartSubtitle">لديك <span id="itemCountText">0</span> منتج في سلتك</p>
+    <h1><i class="fas fa-shopping-cart"></i> Shopping Cart</h1>
+    <p id="cartSubtitle">You have <span id="itemCountText">0</span> items in your cart</p>
 </div>
 
 <!-- Breadcrumb -->
 <div class="breadcrumb">
-    <a href="index.html"><i class="fas fa-home"></i> الرئيسية</a>
-    <i class="fas fa-chevron-left" style="font-size:0.7rem"></i>
-    <a href="products.html">المنتجات</a>
-    <i class="fas fa-chevron-left" style="font-size:0.7rem"></i>
-    <span>السلة</span>
+    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+    <i class="fas fa-chevron-right" style="font-size:0.7rem"></i>
+    <a href="products.html">Products</a>
+    <i class="fas fa-chevron-right" style="font-size:0.7rem"></i>
+    <span>Cart</span>
 </div>
 
 <!-- Cart Layout -->
@@ -49,61 +49,61 @@
     <!-- Items -->
     <div class="cart-items-section">
         <div class="section-header">
-            <h2><i class="fas fa-list"></i> المنتجات المختارة</h2>
-            <button class="clear-cart-btn" onclick="clearCart()"><i class="fas fa-trash"></i> مسح الكل</button>
+            <h2><i class="fas fa-list"></i> Selected Products</h2>
+            <button class="clear-cart-btn" onclick="clearCart()"><i class="fas fa-trash"></i> Clear Cart</button>
         </div>
         <div id="cartItemsContainer"></div>
         <div class="continue-shopping">
-            <a href="products.html" class="back-btn"><i class="fas fa-arrow-right"></i> متابعة التسوق</a>
+            <a href="products.html" class="back-btn"><i class="fas fa-arrow-left"></i> Continue Shopping</a>
         </div>
     </div>
 
     <!-- Summary -->
     <div class="order-summary">
         <div class="summary-box">
-            <h2><i class="fas fa-receipt"></i> ملخص الطلب</h2>
+            <h2><i class="fas fa-receipt"></i> Order Summary</h2>
             <div class="summary-row">
-                <span>سعر المنتجات</span>
-                <span id="subtotalVal">0 ج.م</span>
+                <span>Subtotal</span>
+                <span id="subtotalVal">0 EGP</span>
             </div>
             <div class="summary-row discount-row" id="discountRow" style="display:none">
-                <span>الخصم</span>
-                <span id="discountVal">-0 ج.م</span>
+                <span>Discount</span>
+                <span id="discountVal">-0 EGP</span>
             </div>
             <div class="summary-row free">
-                <span><i class="fas fa-truck"></i> الشحن</span>
-                <span>مجاني 🎉</span>
+                <span><i class="fas fa-truck"></i> Shipping</span>
+                <span>Free 🎉</span>
             </div>
             <div class="summary-row">
-                <span>الضريبة (14%)</span>
-                <span id="taxVal">0 ج.م</span>
+                <span>Tax (14%)</span>
+                <span id="taxVal">0 EGP</span>
             </div>
             <div class="summary-row total">
-                <span>الإجمالي</span>
-                <span id="totalVal">0 ج.م</span>
+                <span>Total</span>
+                <span id="totalVal">0 EGP</span>
             </div>
 
             <!-- Promo Code -->
             <div class="promo-section">
-                <label><i class="fas fa-tag"></i> كود الخصم</label>
+                <label><i class="fas fa-tag"></i> Promo Code</label>
                 <div class="promo-input">
-                    <input type="text" id="promoInput" placeholder="أدخل كود الخصم...">
-                    <button class="promo-btn" onclick="applyPromo()">تطبيق</button>
+                    <input type="text" id="promoInput" placeholder="Enter promo code...">
+                    <button class="promo-btn" onclick="applyPromo()">Apply</button>
                 </div>
                 <p class="promo-msg" id="promoMsg"></p>
             </div>
 
             <button class="checkout-btn" id="checkoutBtn" onclick="checkout()">
-                <i class="fas fa-lock"></i> إتمام الشراء
+                <i class="fas fa-lock"></i> Checkout
             </button>
 
             <div class="payment-methods">
-                <p>طرق الدفع المتاحة</p>
+                <p>Payment Methods</p>
                 <div class="payment-icons">
                     <i class="fab fa-cc-visa"></i>
                     <i class="fab fa-cc-mastercard"></i>
                     <i class="fab fa-cc-paypal"></i>
-                    <i class="fas fa-money-bill-wave" title="كاش"></i>
+                    <i class="fas fa-money-bill-wave" title="Cash"></i>
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@
 
 <!-- Suggested Products -->
 <div class="suggested" id="suggestedSection">
-    <h2><i class="fas fa-fire"></i> قد يعجبك أيضاً</h2>
+    <h2><i class="fas fa-fire"></i> You Might Also Like</h2>
     <div class="suggested-grid" id="suggestedGrid"></div>
 </div>
 
@@ -121,7 +121,7 @@
     <div class="footer-container">
         <div class="footer-section">
             <h3><i class="fas fa-store"></i> TechStore</h3>
-            <p>متجرك الأول للأجهزة الإلكترونية الحديثة بأفضل الأسعار وأعلى جودة</p>
+            <p>Your top store for the latest electronics with the best prices and highest quality</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -130,27 +130,32 @@
             </div>
         </div>
         <div class="footer-section">
-            <h3>روابط سريعة</h3>
-            <ul><li><a href="index.html">الرئيسية</a></li><li><a href="products.html">المنتجات</a></li></ul>
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+            </ul>
         </div>
         <div class="footer-section">
-            <h3>خدمة العملاء</h3>
-            <ul><li><a href="#">اتصل بنا</a></li><li><a href="#">الأسئلة الشائعة</a></li><li><a href="#">سياسة الإرجاع</a></li></ul>
+            <h3>Customer Service</h3>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Return Policy</a></li>
+            </ul>
         </div>
         <div class="footer-section">
-            <h3>تواصل معنا</h3>
+            <h3>Get in Touch</h3>
             <p><i class="fas fa-envelope"></i> info@techstore.com</p>
-            <p><i class="fas fa-phone"></i> 01234567890</p>
-            <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+            <p><i class="fas fa-phone"></i> +20 123 456 7890</p>
+            <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
         </div>
     </div>
-    <div class="footer-bottom"><p>© 2025 TechStore. جميع الحقوق محفوظة.</p></div>
+    <div class="footer-bottom"><p>© 2025 TechStore. All rights reserved.</p></div>
 </footer>
 
 <div class="toast" id="toast"></div>
 
-<script src="./js/cart.js">
-
-</script>
+<script src="./js/cart.js"></script>
 </body>
 </html>

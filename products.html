@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>المنتجات - TechStore</title>
+    <title>Products - TechStore</title>
     <link rel="stylesheet" href="./css/products.css">
     <link rel="stylesheet" href="./css/all.min.css">
-    <style>
-
-    </style>
 </head>
 
 <body>
@@ -21,16 +18,15 @@
                 <i class="fas fa-mobile-alt"></i> TechStore
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">الرئيسية</a></li>
-                <li><a href="./webfonts/
-                " class="active">المنتجات</a></li>
-                <li><a href="./products.html">العروض</a></li>
-                <li><a href="./aboutUs.html">من نحن</a></li>
-                <li><a href="./contactUs.html">اتصل بنا</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./products.html" class="active">Products</a></li>
+                <li><a href="./products.html">Offers</a></li>
+                <li><a href="./aboutUs.html">About Us</a></li>
+                <li><a href="./contactUs.html">Contact</a></li>
             </ul>
             <div class="nav-actions">
                 <div class="search-box">
-                    <input type="text" placeholder="ابحث عن منتج..." id="searchInput" oninput="filterProducts()">
+                    <input type="text" placeholder="Search products..." id="searchInput" oninput="filterProducts()">
                 </div>
                 <div class="cart-icon" onclick="window.location.href='cart.html'">
                     <i class="fas fa-shopping-cart"></i>
@@ -42,8 +38,8 @@
 
     <!-- Page Hero -->
     <div class="page-hero">
-        <h1><i class="fas fa-store"></i> جميع المنتجات</h1>
-        <p>اختر من أكثر من 500 منتج إلكتروني بأفضل الأسعار</p>
+        <h1><i class="fas fa-store"></i> All Products</h1>
+        <p>Choose from over 500 electronic products at the best prices</p>
     </div>
 
     <!-- Main Layout -->
@@ -52,105 +48,85 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="filter-box">
-                <h3><i class="fas fa-filter"></i> الفئات</h3>
-                <div class="filter-option"><input type="checkbox" id="cat1" onchange="filterProducts()"><label
-                        for="cat1">موبايلات</label></div>
-                <div class="filter-option"><input type="checkbox" id="cat2" onchange="filterProducts()"><label
-                        for="cat2">لابتوبات</label></div>
-                <div class="filter-option"><input type="checkbox" id="cat3" onchange="filterProducts()"><label
-                        for="cat3">ساعات ذكية</label></div>
-                <div class="filter-option"><input type="checkbox" id="cat4" onchange="filterProducts()"><label
-                        for="cat4">سماعات</label></div>
-                <div class="filter-option"><input type="checkbox" id="cat5" onchange="filterProducts()"><label
-                        for="cat5">كاميرات</label></div>
-                <div class="filter-option"><input type="checkbox" id="cat6" onchange="filterProducts()"><label
-                        for="cat6">ألعاب</label></div>
+                <h3><i class="fas fa-filter"></i> Categories</h3>
+                <div class="filter-option"><input type="checkbox" id="cat1" onchange="filterProducts()"><label for="cat1">Mobiles</label></div>
+                <div class="filter-option"><input type="checkbox" id="cat2" onchange="filterProducts()"><label for="cat2">Laptops</label></div>
+                <div class="filter-option"><input type="checkbox" id="cat3" onchange="filterProducts()"><label for="cat3">Smart Watches</label></div>
+                <div class="filter-option"><input type="checkbox" id="cat4" onchange="filterProducts()"><label for="cat4">Headphones</label></div>
+                <div class="filter-option"><input type="checkbox" id="cat5" onchange="filterProducts()"><label for="cat5">Cameras</label></div>
+                <div class="filter-option"><input type="checkbox" id="cat6" onchange="filterProducts()"><label for="cat6">Gaming</label></div>
             </div>
 
             <div class="filter-box">
-                <h3><i class="fas fa-tags"></i> نطاق السعر</h3>
+                <h3><i class="fas fa-tags"></i> Price Range</h3>
                 <div class="price-range">
                     <div class="price-inputs">
-                        <input type="number" id="minPrice" placeholder="من" min="0" value="0"
-                            oninput="filterProducts()">
-                        <input type="number" id="maxPrice" placeholder="إلى" min="0" value="50000"
-                            oninput="filterProducts()">
+                        <input type="number" id="minPrice" placeholder="Min" min="0" value="0" oninput="filterProducts()">
+                        <input type="number" id="maxPrice" placeholder="Max" min="0" value="50000" oninput="filterProducts()">
                     </div>
-                    <input type="range" id="priceRange" min="0" max="50000" value="50000"
-                        oninput="document.getElementById('maxPrice').value=this.value; filterProducts()">
+                    <input type="range" id="priceRange" min="0" max="50000" value="50000" oninput="document.getElementById('maxPrice').value=this.value; filterProducts()">
                 </div>
             </div>
 
             <div class="filter-box">
-                <h3><i class="fas fa-star"></i> التقييم</h3>
-                <div class="filter-option"><input type="checkbox" id="r5" onchange="filterProducts()"><label
-                        for="r5">⭐⭐⭐⭐⭐ فقط</label></div>
-                <div class="filter-option"><input type="checkbox" id="r4" onchange="filterProducts()"><label
-                        for="r4">⭐⭐⭐⭐ فأكثر</label></div>
-                <div class="filter-option"><input type="checkbox" id="r3" onchange="filterProducts()"><label
-                        for="r3">⭐⭐⭐ فأكثر</label></div>
+                <h3><i class="fas fa-star"></i> Rating</h3>
+                <div class="filter-option"><input type="checkbox" id="r5" onchange="filterProducts()"><label for="r5">⭐⭐⭐⭐⭐ Only</label></div>
+                <div class="filter-option"><input type="checkbox" id="r4" onchange="filterProducts()"><label for="r4">⭐⭐⭐⭐ & Up</label></div>
+                <div class="filter-option"><input type="checkbox" id="r3" onchange="filterProducts()"><label for="r3">⭐⭐⭐ & Up</label></div>
             </div>
 
             <div class="filter-box">
-                <h3><i class="fas fa-trademark"></i> العلامات التجارية</h3>
-                <div class="filter-option"><input type="checkbox" id="bApple" onchange="filterProducts()"><label
-                        for="bApple">Apple</label></div>
-                <div class="filter-option"><input type="checkbox" id="bSamsung" onchange="filterProducts()"><label
-                        for="bSamsung">Samsung</label></div>
-                <div class="filter-option"><input type="checkbox" id="bXiaomi" onchange="filterProducts()"><label
-                        for="bXiaomi">Xiaomi</label></div>
-                <div class="filter-option"><input type="checkbox" id="bSony" onchange="filterProducts()"><label
-                        for="bSony">Sony</label></div>
-                <div class="filter-option"><input type="checkbox" id="bDell" onchange="filterProducts()"><label
-                        for="bDell">Dell</label></div>
-                <div class="filter-option"><input type="checkbox" id="bHP" onchange="filterProducts()"><label
-                        for="bHP">HP</label></div>
+                <h3><i class="fas fa-trademark"></i> Brands</h3>
+                <div class="filter-option"><input type="checkbox" id="bApple" onchange="filterProducts()"><label for="bApple">Apple</label></div>
+                <div class="filter-option"><input type="checkbox" id="bSamsung" onchange="filterProducts()"><label for="bSamsung">Samsung</label></div>
+                <div class="filter-option"><input type="checkbox" id="bXiaomi" onchange="filterProducts()"><label for="bXiaomi">Xiaomi</label></div>
+                <div class="filter-option"><input type="checkbox" id="bSony" onchange="filterProducts()"><label for="bSony">Sony</label></div>
+                <div class="filter-option"><input type="checkbox" id="bDell" onchange="filterProducts()"><label for="bDell">Dell</label></div>
+                <div class="filter-option"><input type="checkbox" id="bHP" onchange="filterProducts()"><label for="bHP">HP</label></div>
             </div>
 
             <button class="apply-filter" onclick="resetFilters()">
-                <i class="fas fa-redo"></i> إعادة تعيين الفلاتر
+                <i class="fas fa-redo"></i> Reset Filters
             </button>
         </aside>
 
         <!-- Products Area -->
         <main class="products-area">
             <div class="products-toolbar">
-                <p class="results-count">عرض <span id="productCount">18</span> منتج</p>
+                <p class="results-count">Showing <span id="productCount">18</span> products</p>
                 <div style="display:flex;gap:15px;align-items:center;flex-wrap:wrap;">
                     <div class="view-toggle">
-                        <button class="view-btn active" onclick="setView('grid',this)" title="شبكة"><i
-                                class="fas fa-th"></i></button>
-                        <button class="view-btn" onclick="setView('list',this)" title="قائمة"><i
-                                class="fas fa-list"></i></button>
+                        <button class="view-btn active" onclick="setView('grid',this)" title="Grid View"><i class="fas fa-th"></i></button>
+                        <button class="view-btn" onclick="setView('list',this)" title="List View"><i class="fas fa-list"></i></button>
                     </div>
                     <select class="sort-select" id="sortSelect" onchange="filterProducts()">
-                        <option value="default">ترتيب افتراضي</option>
-                        <option value="price-asc">السعر: من الأقل</option>
-                        <option value="price-desc">السعر: من الأعلى</option>
-                        <option value="rating">الأعلى تقييماً</option>
-                        <option value="newest">الأحدث</option>
+                        <option value="default">Default Sorting</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="rating">Top Rated</option>
+                        <option value="newest">Newest</option>
                     </select>
                 </div>
             </div>
 
             <div class="category-tabs" id="categoryTabs">
-                <button class="tab-btn active" onclick="setCategory('all',this)">الكل</button>
-                <button class="tab-btn" onclick="setCategory('موبايلات',this)"><i class="fas fa-mobile-alt"></i> موبايلات</button>
-                <button class="tab-btn" onclick="setCategory('لابتوبات',this)"><i class="fas fa-laptop"></i> لابتوبات</button>
-                <button class="tab-btn" onclick="setCategory('ساعات ذكية',this)"><i class="fas fa-clock"></i> ساعات</button>
-                <button class="tab-btn" onclick="setCategory('سماعات',this)"><i class="fas fa-headphones"></i> سماعات</button>
-                <button class="tab-btn" onclick="setCategory('كاميرات',this)"><i class="fas fa-camera"></i> كاميرات</button>
-                <button class="tab-btn" onclick="setCategory('ألعاب',this)"><i class="fas fa-gamepad"></i> ألعاب</button>
+                <button class="tab-btn active" onclick="setCategory('all',this)">All</button>
+                <button class="tab-btn" onclick="setCategory('Mobiles',this)"><i class="fas fa-mobile-alt"></i> Mobiles</button>
+                <button class="tab-btn" onclick="setCategory('Laptops',this)"><i class="fas fa-laptop"></i> Laptops</button>
+                <button class="tab-btn" onclick="setCategory('Smart Watches',this)"><i class="fas fa-clock"></i> Watches</button>
+                <button class="tab-btn" onclick="setCategory('Headphones',this)"><i class="fas fa-headphones"></i> Headphones</button>
+                <button class="tab-btn" onclick="setCategory('Cameras',this)"><i class="fas fa-camera"></i> Cameras</button>
+                <button class="tab-btn" onclick="setCategory('Gaming',this)"><i class="fas fa-gamepad"></i> Gaming</button>
             </div>
 
             <div class="products-grid" id="productsGrid"></div>
 
             <div class="pagination" id="pagination">
-                <button class="page-btn" onclick="changePage(-1)"><i class="fas fa-chevron-right"></i></button>
+                <button class="page-btn" onclick="changePage(-1)"><i class="fas fa-chevron-left"></i></button>
                 <button class="page-btn active" id="page1">1</button>
                 <button class="page-btn" id="page2">2</button>
                 <button class="page-btn" id="page3">3</button>
-                <button class="page-btn" onclick="changePage(1)"><i class="fas fa-chevron-left"></i></button>
+                <button class="page-btn" onclick="changePage(1)"><i class="fas fa-chevron-right"></i></button>
             </div>
         </main>
     </div>
@@ -160,7 +136,7 @@
         <div class="footer-container">
             <div class="footer-section">
                 <h3><i class="fas fa-store"></i> TechStore</h3>
-                <p>متجرك الأول للأجهزة الإلكترونية الحديثة بأفضل الأسعار وأعلى جودة</p>
+                <p>Your #1 store for modern electronics with best prices and quality</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -169,40 +145,37 @@
                 </div>
             </div>
             <div class="footer-section">
-                <h3>روابط سريعة</h3>
+                <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="products.html">المنتجات</a></li>
-                    <li><a href="#">العروض الخاصة</a></li>
-                    <li><a href="#">المدونة</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="#">Special Offers</a></li>
+                    <li><a href="#">Blog</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>خدمة العملاء</h3>
+                <h3>Customer Service</h3>
                 <ul>
-                    <li><a href="#">اتصل بنا</a></li>
-                    <li><a href="#">الأسئلة الشائعة</a></li>
-                    <li><a href="#">سياسة الشحن</a></li>
-                    <li><a href="#">سياسة الإرجاع</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return Policy</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h3>تواصل معنا</h3>
+                <h3>Contact</h3>
                 <p><i class="fas fa-envelope"></i> info@techstore.com</p>
                 <p><i class="fas fa-phone"></i> 01234567890</p>
-                <p><i class="fas fa-map-marker-alt"></i> القاهرة، مصر</p>
+                <p><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2025 TechStore. جميع الحقوق محفوظة.</p>
+            <p>© 2025 TechStore. All rights reserved.</p>
         </div>
     </footer>
 
     <div class="toast" id="toast"></div>
 
-    <script src="./js/products.js">
-
-    </script>
+    <script src="./js/products.js"></script>
 </body>
-
 </html>

@@ -52,17 +52,29 @@ function validate() {
 }
 
 function submitForm() {
-    if (!validate()) { showToast('❌ يرجى تصحيح الأخطاء أولاً'); return; }
+    // Check validation
+    if (!validate()) { 
+        showToast('❌ Please fix the errors first'); 
+        return; 
+    }
+
     const btn = document.getElementById('submitBtn');
+
+    // Disable button and show loading spinner
     btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جارٍ الإرسال...';
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+    // Fake submission delay
     setTimeout(() => {
-        document.querySelectorAll('.form-group, .submit-btn, h2, .form-desc').forEach(el=>el.style.display='none');
+        // Hide form elements
+        document.querySelectorAll('.form-group, .submit-btn, h2, .form-desc')
+                .forEach(el => el.style.display = 'none');
+
+        // Show success message
         document.getElementById('successMsg').style.display = 'block';
-        showToast('✅ تم إرسال رسالتك بنجاح!');
+        showToast('✅ Your message was sent successfully!');
     }, 1500);
 }
-
 function resetForm() {
     document.getElementById('successMsg').style.display = 'none';
     document.querySelectorAll('.form-group').forEach(el=>el.style.display='block');
