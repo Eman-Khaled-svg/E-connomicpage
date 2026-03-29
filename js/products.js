@@ -1,22 +1,22 @@
 const allProducts = [
-    { id: 1, name: 'iPhone 15 Pro Max', category: 'Mobiles', brand: 'Apple', price: 35999, oldPrice: 39999, rating: 5, reviews: 412, img:'../img/iPhone 15 Pro Max.jpg', badge: 'new', discount: '10%' },
-    { id: 2, name: 'Samsung Galaxy S24 Ultra', category: 'Mobiles', brand: 'Samsung', price: 29999, oldPrice: 34999, rating: 4.8, reviews: 287, img:'../img/Samsung Galaxy S24 Ultra.jpg', badge: 'hot', discount: '14%' },
-    { id: 3, name: 'Xiaomi 14 Pro', category: 'Mobiles', brand: 'Xiaomi', price: 18999, oldPrice: 21999, rating: 4.6, reviews: 195, img:'../img/Xiaomi 14 Pro.jpg', badge: 'sale', discount: '14%' },
-    { id: 4, name: 'MacBook Pro 16"', category: 'Laptops', brand: 'Apple', price: 49999, oldPrice: 54999, rating: 5, reviews: 321, img: '../img/MacBook Pro 16.jpg', badge: 'new', discount: '9%' },
-    { id: 5, name: 'Dell XPS 15', category: 'Laptops', brand: 'Dell', price: 32999, oldPrice: 36999, rating: 4.7, reviews: 156, img:'../img/Dell XPS 15.jpg', badge: null, discount: null },
-    { id: 6, name: 'HP Spectre x360', category: 'Laptops', brand: 'HP', price: 28999, oldPrice: 31999, rating: 4.5, reviews: 98, img:'../img/HP Spectre x360.jpg', badge: 'sale', discount: '9%' },
-    { id: 7, name: 'Apple Watch Ultra 2', category: 'Smart Watches', brand: 'Apple', price: 15999, oldPrice: 17999, rating: 4.9, reviews: 234, img:'../img/Apple Watch Ultra 2.jfif', badge: 'new', discount: '11%' },
-    { id: 8, name: 'Samsung Galaxy Watch 6', category: 'Smart Watches', brand: 'Samsung', price: 7999, oldPrice: 9999, rating: 4.6, reviews: 178, img:'../img/Samsung Galaxy Watch 6.jfif', badge: 'sale', discount: '20%' },
-    { id: 9, name: 'Sony WH-1000XM5', category: 'Headphones', brand: 'Sony', price: 9999, oldPrice: 12999, rating: 4.9, reviews: 543, img:'../img/Sony WH-1000XM5.jfif', badge: 'hot', discount: '23%' },
-    { id: 10, name: 'AirPods Pro 2', category: 'Headphones', brand: 'Apple', price: 8999, oldPrice: 10999, rating: 4.8, reviews: 387, img:'../img/AirPods Pro 2.jfif', badge: 'new', discount: '18%' },
-    { id: 11, name: 'Samsung Galaxy Buds3 Pro', category: 'Headphones', brand: 'Samsung', price: 4999, oldPrice: 5999, rating: 4.5, reviews: 213, img:'../img/Samsung Galaxy Buds3 Pro.jfif', badge: null, discount: null },
-    { id: 12, name: 'Sony Alpha A7 IV', category: 'Cameras', brand: 'Sony', price: 42999, oldPrice: 47999, rating: 5, reviews: 89, img: '../img/Sony Alpha A7 IV.jfif', badge: 'new', discount: '10%' },
-    { id: 13, name: 'PlayStation 5', category: 'Gaming', brand: 'Sony', price: 19999, oldPrice: 21999, rating: 4.9, reviews: 612, img:'../img/PlayStation 5.jfif', badge: 'hot', discount: '9%' },
-    { id: 14, name: 'Xbox Series X', category: 'Gaming', brand: 'Microsoft', price: 17999, oldPrice: 19999, rating: 4.7, reviews: 445, img:'../img/Xbox Series X.jfif', badge: null, discount: null },
-    { id: 15, name: 'Xiaomi Smart Watch S3', category: 'Smart Watches', brand: 'Xiaomi', price: 3999, oldPrice: 4999, rating: 4.3, reviews: 167, img:'../img/Xiaomi Smart Watch S3.jfif', badge: 'sale', discount: '20%' },
-    { id: 16, name: 'Lenovo ThinkPad X1', category: 'Laptops', brand: 'Lenovo', price: 26999, oldPrice: 29999, rating: 4.6, reviews: 134, img:'../img/Lenovo ThinkPad X1.jfif', badge: null, discount: null },
-    { id: 17, name: 'Samsung Galaxy Tab S9', category: 'Mobiles', brand: 'Samsung', price: 14999, oldPrice: 16999, rating: 4.7, reviews: 203, img:'../img/Samsung Galaxy Tab S9.jfif', badge: 'sale', discount: '12%' },
-    { id: 18, name: 'GoPro Hero 12', category: 'Cameras', brand: 'GoPro', price: 7999, oldPrice: 8999, rating: 4.6, reviews: 321, img:'../img/GoPro Hero 12.jpg', badge: 'new', discount: '11%' }
+    { id: 1, name: 'iPhone 15 Pro Max', category: 'Mobiles', brand: 'Apple', price: 35999, oldPrice: 39999, rating: 5, reviews: 412, img:'img/iPhone 15 Pro Max.jpg', badge: 'new', discount: '10%' },
+    { id: 2, name: 'Samsung Galaxy S24 Ultra', category: 'Mobiles', brand: 'Samsung', price: 29999, oldPrice: 34999, rating: 4.8, reviews: 287, img:'img/Samsung Galaxy S24 Ultra.jpg', badge: 'hot', discount: '14%' },
+    { id: 3, name: 'Xiaomi 14 Pro', category: 'Mobiles', brand: 'Xiaomi', price: 18999, oldPrice: 21999, rating: 4.6, reviews: 195, img:'img/Xiaomi 14 Pro.jpg', badge: 'sale', discount: '14%' },
+    { id: 4, name: 'MacBook Pro 16"', category: 'Laptops', brand: 'Apple', price: 49999, oldPrice: 54999, rating: 5, reviews: 321, img: 'img/MacBook Pro 16.jpg', badge: 'new', discount: '9%' },
+    { id: 5, name: 'Dell XPS 15', category: 'Laptops', brand: 'Dell', price: 32999, oldPrice: 36999, rating: 4.7, reviews: 156, img:'img/Dell XPS 15.jpg', badge: null, discount: null },
+    { id: 6, name: 'HP Spectre x360', category: 'Laptops', brand: 'HP', price: 28999, oldPrice: 31999, rating: 4.5, reviews: 98, img:'img/HP Spectre x360.jpg', badge: 'sale', discount: '9%' },
+    { id: 7, name: 'Apple Watch Ultra 2', category: 'Smart Watches', brand: 'Apple', price: 15999, oldPrice: 17999, rating: 4.9, reviews: 234, img:'img/Apple Watch Ultra 2.jpg', badge: 'new', discount: '11%' },
+    { id: 8, name: 'Samsung Galaxy Watch 6', category: 'Smart Watches', brand: 'Samsung', price: 7999, oldPrice: 9999, rating: 4.6, reviews: 178, img:'img/Samsung Galaxy Watch 6.jpg', badge: 'sale', discount: '20%' },
+    { id: 9, name: 'Sony WH-1000XM5', category: 'Headphones', brand: 'Sony', price: 9999, oldPrice: 12999, rating: 4.9, reviews: 543, img:'img/Sony WH-1000XM5.jfif', badge: 'hot', discount: '23%' },
+    { id: 10, name: 'AirPods Pro 2', category: 'Headphones', brand: 'Apple', price: 8999, oldPrice: 10999, rating: 4.8, reviews: 387, img:'img/AirPods Pro 2.jpg', badge: 'new', discount: '18%' },
+    { id: 11, name: 'Samsung Galaxy Buds3 Pro', category: 'Headphones', brand: 'Samsung', price: 4999, oldPrice: 5999, rating: 4.5, reviews: 213, img:'img/Samsung Galaxy Buds3 Pro.jpg', badge: null, discount: null },
+    { id: 12, name: 'Sony Alpha A7 IV', category: 'Cameras', brand: 'Sony', price: 42999, oldPrice: 47999, rating: 5, reviews: 89, img: 'img/Sony Alpha A7 IV.jpg', badge: 'new', discount: '10%' },
+    { id: 13, name: 'PlayStation 5', category: 'Gaming', brand: 'Sony', price: 19999, oldPrice: 21999, rating: 4.9, reviews: 612, img:'img/PlayStation 5.jpg', badge: 'hot', discount: '9%' },
+    { id: 14, name: 'Xbox Series X', category: 'Gaming', brand: 'Microsoft', price: 17999, oldPrice: 19999, rating: 4.7, reviews: 445, img:'img/Xbox Series X.jpg', badge: null, discount: null },
+    { id: 15, name: 'Xiaomi Smart Watch S3', category: 'Smart Watches', brand: 'Xiaomi', price: 3999, oldPrice: 4999, rating: 4.3, reviews: 167, img:'img/Xiaomi Smart Watch S3.jpg', badge: 'sale', discount: '20%' },
+    { id: 16, name: 'Lenovo ThinkPad X1', category: 'Laptops', brand: 'Lenovo', price: 26999, oldPrice: 29999, rating: 4.6, reviews: 134, img:'img/Lenovo ThinkPad X1.jpg', badge: null, discount: null },
+    { id: 17, name: 'Samsung Galaxy Tab S9', category: 'Mobiles', brand: 'Samsung', price: 14999, oldPrice: 16999, rating: 4.7, reviews: 203, img:'img/Samsung Galaxy Tab S9.jpg', badge: 'sale', discount: '12%' },
+    { id: 18, name: 'GoPro Hero 12', category: 'Cameras', brand: 'GoPro', price: 7999, oldPrice: 8999, rating: 4.6, reviews: 321, img:'img/GoPro Hero 12.jpg', badge: 'new', discount: '11%' }
 ];
 
 let currentCategory = 'all';
@@ -158,7 +158,7 @@ function renderProducts(products) {
                     ${p.discount ? `<span class="price-discount">-${p.discount}</span>` : ''}
                 </div>
                 <div class="product-actions">
-                    <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart({id:${p.id},name:'${p.name}',price:${p.price},emoji:'${p.emoji}'})">
+                    <button class="btn-add-cart" onclick="event.stopPropagation(); addToCart({id:${p.id},name:'${p.name}',price:${p.price},img:'${p.img}'})">
                         <i class="fas fa-cart-plus"></i> Add to Cart
                     </button>
                     <button class="btn-view" onclick="event.stopPropagation(); window.location.href='productDetails.html?id=${p.id}'">
